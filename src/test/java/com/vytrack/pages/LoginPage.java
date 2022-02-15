@@ -1,5 +1,6 @@
 package com.vytrack.pages;
 
+import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,7 @@ public class LoginPage {
 
 
     public void login(String userNameStr, String passwordStr) {
+        BrowserUtils.waitFor(2);
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         submit.click();

@@ -2,21 +2,21 @@
 Feature: Logged in sales managers should be able to navigate to pages using the top menu. Once in the expected page,
   user should see correct page Title.
 
-  @TC-1 @smoke
+  @TC-1
   Scenario: Navigate to Fleet > Vehicles using the top menu
     Given the user is on the login page
     And the user enters the sales manager information
     When the user navigates to Fleet, Vehicle page
     Then the title should be Vehicles
 
-  @TC-2 @db @smoke @test2
+  @TC-2 @db  @test2
   Scenario: Navigate to Marketing > Campaigns using the top menu
     Given the user is on the login page
     And the user enters the sales manager information
     When the user navigates to Marketing, Campaigns page
     Then the title should be Campaigns
 
-  @TC-3 @smoke
+  @TC-3
   Scenario: Navigate to Activities > Calendar Events
     Given the user is on the login page
     And the user enters the sales manager information
