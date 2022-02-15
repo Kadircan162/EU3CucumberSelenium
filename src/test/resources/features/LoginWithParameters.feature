@@ -8,7 +8,7 @@ Feature: Login as a different user
     And the title contains "Dashboard"
 
     #homework (driver, storemanager, salesmanager, )
-  @wip @setupAndKill
+
   Scenario: login as any user
     Given the user is on the login page
     When the user logs in as the user type > "Sales manager"

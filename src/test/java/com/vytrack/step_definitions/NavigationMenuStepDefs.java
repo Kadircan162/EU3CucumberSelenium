@@ -46,9 +46,10 @@ public class NavigationMenuStepDefs {
 
     }
 
-    @When("the user navigates to {string} > {string} module")
-    public void the_user_navigates_to_module(String tab, String module) {
+    @When("the user navigates to {string} {string}")
+    public void the_user_navigates_to(String tab, String module) {
         new DashboardPage().navigateToModule(tab,module);
+        BrowserUtils.waitFor(2);
     }
 
     @Then("the page number is {int}")

@@ -28,7 +28,7 @@ public class LoginStepDefs {
     }
 
     @Then("the user should be able to login")
-    public void the_user_should_be_able_to_login(){ //Skipped (third step) when there is no step definition
+    public void the_user_should_be_able_to_login() { //Skipped (third step) when there is no step definition
         DashboardPage dashboard = new DashboardPage();
         BrowserUtils.waitFor(3);
         String actualTitle = Driver.get().getTitle();
@@ -55,12 +55,12 @@ public class LoginStepDefs {
 
     @When("the user login using {string} and {string}")
     public void the_user_login_using_and(String username, String password) {
-        LoginPage loginPage =  new LoginPage();
-        loginPage.login(username,password);
+        LoginPage loginPage = new LoginPage();
+        loginPage.login(username, password);
     }
 
     @Then("the title contains {string}")
-    public void the_title_contains(String expectedPageTitle){
+    public void the_title_contains(String expectedPageTitle) {
         String actualTitle = Driver.get().getTitle();
         System.out.println("actualTitle = " + actualTitle);
         System.out.println("expectedPageTitle = " + expectedPageTitle);
@@ -70,10 +70,11 @@ public class LoginStepDefs {
 
     @When("the user logs in as the user type > {string}")
     public void the_user_logs_in_as_the_user_type(String userType) {
-       String username = ConfigurationReader.get(userType.toLowerCase().replaceAll(" ", "") + "_username");
-       String password = ConfigurationReader.get(userType.toLowerCase().replaceAll(" ", "") + "_password");
-       new LoginPage().login(username,password);
+        String username = ConfigurationReader.get(userType.toLowerCase().replaceAll(" ", "") + "_username");
+        String password = ConfigurationReader.get(userType.toLowerCase().replaceAll(" ", "") + "_password");
+        new LoginPage().login(username, password);
     }
+
 
 
 }

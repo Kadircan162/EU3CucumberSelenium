@@ -19,3 +19,4 @@ Feature: Users should be able to login
   Scenario: Login as a store manager
     When the user enters the store manager information
     Then the user should be able to login
+

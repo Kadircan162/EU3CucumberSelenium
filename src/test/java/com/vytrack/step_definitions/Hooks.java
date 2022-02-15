@@ -1,5 +1,6 @@
 package com.vytrack.step_definitions;
 
+import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -22,7 +23,7 @@ public class Hooks {
 
     @Before("@setupAndKill")
     public void setUpDb(){
-
+        Driver.get().get(ConfigurationReader.get("url"));
     }
 
     @After("@setupAndKill")
