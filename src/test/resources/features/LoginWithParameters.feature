@@ -1,6 +1,6 @@
 Feature: Login as a different user
 
-  @db
+  @smoke @db
   Scenario: login as a driver user
     Given the user is on the login page
     When the user login using "user10" and "UserUser123"

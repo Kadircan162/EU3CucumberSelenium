@@ -12,7 +12,7 @@ Feature: Account Types
     When the user navigates to "Customers" "Accounts"
     Then the title contains "Accounts - Customer"
 
-  @wip @setupAndKill
+  @smoke @setupAndKill
   Scenario: Store manager
     Given the user logs in as the user type > "Store manager"
     When the user navigates to "Customers" "Contacts"
